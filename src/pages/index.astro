@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import robot11 from '../assets/robot11.jpg';
+import robot12 from '../assets/robot12.jpg';
 ---
 
 <!doctype html>
@@ -16,35 +17,33 @@ import robot11 from '../assets/robot11.jpg';
 		<Header />
 		<main>
 			<h1>🤖 ROBOT TONDEUSE DIY</h1>
-			<img src={robot11} alt="Robot 11" />
+			<img src={robot11.src} alt="Robot 11" />
 			<p>
 				Dobby1 Le premier robot Tondeuse qui ne ressemble à rien.
 			</p>
 			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+				<img src={robot12.src} alt="Robot 12" />
 			</p>
 			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+				Pour ce projet, j'ai entrepris de concevoir un robot tondeuse autonome en partant d'une base robuste et économique : le châssis motorisé d'une chaise roulante électrique pour personne handicapée, dénichée chez Emmaüs. Cette plateforme offre une structure solide, déjà équipée de moteurs de traction puissants, d'un système de direction fiable et d'une mécanique pensée pour supporter des charges importantes. C'est un excellent point de départ pour un robot outdoor nécessitant stabilité, couple et endurance.
 			</p>
+			<p>
+				Le cœur du système repose sur une carte STM32H7 Nucleo, un microcontrôleur hautes performances capable de gérer simultanément la propulsion, les actionneurs, les capteurs et les algorithmes de navigation. Les deux moteurs de traction d'origine assurent le déplacement du robot, tandis qu'un vérin électrique permet d'ajuster dynamiquement la hauteur de coupe en fonction du terrain ou des préférences de l'utilisateur.
+			</p>
+			<p>
+				La partie coupe est assurée par deux moteurs 24 V DC de 300 W, que j'ai choisi d'alimenter en 12 V pour des raisons économiques et de simplicité d'intégration. Cette réduction de tension limite la puissance maximale, mais reste largement suffisante pour une tonte domestique tout en diminuant la consommation et l'usure mécanique. Les moteurs sont montés sur un plateau de coupe renforcé, conçu pour résister aux vibrations et aux chocs.
+			</p>
+			<p>
+				Pour le pilotage manuel et la phase d'apprentissage du terrain, j'utilise une radiocommande Radiomaster, qui permet de guider le robot avec précision et d'enregistrer les limites de la parcelle. Une fois ces données mémorisées, la navigation autonome s'appuie sur un système GNSS RTK, offrant une précision centimétrique indispensable pour suivre des trajectoires fiables et éviter les zones interdites. En complément, une caméra IA OpenMV assure la détection des obstacles en temps réel, permettant au robot de réagir instantanément aux imprévus (animaux, objets, branches…).
+			</p>
+			<p>
+				L'alimentation est confiée à quatre cellules LiFePO4, choisies pour leur sécurité, leur longévité et leur stabilité thermique. Elles offrent plusieurs heures d'autonomie, tandis qu'un BDM (Battery Management Device) supervise en permanence la charge, la décharge et l'équilibrage des cellules. Pour rendre le système totalement autonome, la recharge sera assurée par deux panneaux solaires de 400 W, permettant au robot de fonctionner sans infrastructure électrique externe.
+			</p>
+			<p>
+				L'ensemble forme une plateforme robuste, évolutive et entièrement personnalisée, combinant électronique embarquée, mécatronique, IA embarquée et énergie renouvelable. Ce projet me permet d'explorer en profondeur la robotique outdoor, tout en donnant une seconde vie à du matériel réemployé.
+			</p>
+
 		</main>
 		<Footer />
 	</body>
-</html
+</html>
