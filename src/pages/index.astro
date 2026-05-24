@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import robot11 from '../assets/robot11.jpg';
 ---
 
 <!doctype html>
@@ -15,6 +16,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		<Header />
 		<main>
 			<h1>🤖 ROBOT TONDEUSE DIY</h1>
+			<img src={robot11} alt="Robot 11" />
 			<p>
 				Dobby1 Le premier robot Tondeuse qui ne ressemble à rien.
 			</p>
