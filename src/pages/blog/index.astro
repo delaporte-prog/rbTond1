@@ -90,6 +90,9 @@ const posts = (await getCollection('blog')).sort(
 		<Header />
 		<main>
 			<section>
+				<p>
+					Chaque article présenté ci‑dessous se concentre sur un aspect technique précis du projet. Chaque bloc correspond à l’état du système à un instant donné, mais il est important de garder en tête que le robot évolue en permanence : les choix matériels, les algorithmes, l’architecture et les solutions retenues peuvent changer au fil du temps. Le blog reflète donc une progression, étape par étape, plutôt qu’un résultat figé.
+				</p>
 				<ul>
 					{
 						posts.map((post) => (
