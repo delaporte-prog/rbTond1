@@ -1,71 +1,106 @@
-# À propos
-
-Je suis **Alain**, ingénieur en électronique depuis plus de 35 ans au bureau d’étude **Legrand (Limoges)**.  
-Mon parcours m’a conduit à travailler sur de nombreux projets **domotiques**, en intervenant sur :
-
-- la **conception hardware** (cartes électroniques, capteurs, interfaces, alimentation),  
-- le **software embarqué** (firmware, protocoles, communication, automatisation),  
-- l’intégration et la validation de systèmes complets.
-
-Je privilégie une approche orientée **fiabilité**, **robustesse logicielle**, **optimisation énergétique** et **prototypage rapide**.  
-Bricoleur et inventif, j’aime comprendre, analyser et améliorer les systèmes électroniques.
-
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
-## Pourquoi ce blog ?
-
-Je possède un verger d’environ **5000 m²**, dont la tonte me prend près de **5 heures chaque week‑end**.  
-Plutôt que d’acheter un robot tondeuse du commerce, j’ai choisi d’en concevoir un moi‑même afin de :
-
-- maîtriser totalement l’architecture électronique et logicielle,  
-- adapter la machine à la topologie réelle du terrain,  
-- expérimenter différentes stratégies de navigation,  
-- optimiser la consommation énergétique,  
-- intégrer des fonctions avancées non disponibles sur les modèles standards.
-
-Ce blog documente l’ensemble du développement : architecture, choix techniques, essais, évolutions.
-
----
-
-## Robot tondeuse : architecture technique
-
-### 1. Navigation autonome
-- Capteurs de position : GNSS, odométrie, IMU  
-- Détection d’obstacles : ultrasons, lidar, bumpers  
-- Algorithmes : trajectoires aléatoires, spirale, quadrillage, hybridation
-
-### 2. Gestion de l’énergie
-- Batteries Li‑ion ou LiFePO4  
-- BMS et télémétrie en temps réel  
-- Optimisation moteurs / électronique
-
-### 3. Motorisation et contrôle
-- Moteurs DC ou brushless  
-- Drivers, PWM, retour tachymétrique  
-- Contrôle PID ou vectoriel selon configuration
-
-### 4. Sécurité
-- Arrêt d’urgence  
-- Détection de soulèvement  
-- Zones interdites  
-- Supervision logicielle (watchdog, redondance capteurs)
-
-### 5. Software embarqué
-- Architecture modulaire  
-- Communication interne : I²C, UART, CAN  
-- Logs, télémétrie, mise à jour firmware
-
----
-
-## Objectif du site
-
-Ce blog a pour vocation de :
-
-- partager mes choix techniques, schémas et prototypes,  
-- documenter les essais terrain,  
-- proposer des pistes d’amélioration,  
-- échanger avec d’autres passionnés d’électronique,  
-- créer un espace d’apprentissage et de collaboration.
-
-Que vous soyez ingénieur, maker, étudiant ou amateur de robotique, vos retours sont les bienvenus.
-
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead title={`${SITE_TITLE} - À propos`} description={SITE_DESCRIPTION} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<h1>À propos</h1>
+				<p>
+					Je suis <strong>Alain</strong>, ingénieur en électronique depuis plus de 35 ans au bureau d’étude <strong>Legrand (Limoges)</strong>.
+				</p>
+				<p>
+					Mon parcours m’a conduit à travailler sur de nombreux projets <strong>domotiques</strong>, en intervenant sur :
+				</p>
+				<ul>
+					<li>la <strong>conception hardware</strong> (cartes électroniques, capteurs, interfaces, alimentation),</li>
+					<li>le <strong>software embarqué</strong> (firmware, protocoles, communication, automatisation),</li>
+					<li>l’intégration et la validation de systèmes complets.</li>
+				</ul>
+				<p>
+					Je privilégie une approche orientée <strong>fiabilité</strong>, <strong>robustesse logicielle</strong>, <strong>optimisation énergétique</strong> et <strong>prototypage rapide</strong>.
+				</p>
+				<p>
+					Bricoleur et inventif, j’aime comprendre, analyser et améliorer les systèmes électroniques.
+				</p>
+			</section>
+			<section>
+				<h2>Pourquoi ce blog ?</h2>
+				<p>
+					Je possède un verger d’environ <strong>5000 m²</strong>, dont la tonte me prend près de <strong>5 heures chaque week-end</strong>.
+				</p>
+				<p>
+					Plutôt que d’acheter un robot tondeuse du commerce, j’ai choisi d’en concevoir un moi-même afin de :
+				</p>
+				<ul>
+					<li>maîtriser totalement l’architecture électronique et logicielle,</li>
+					<li>adapter la machine à la topologie réelle du terrain,</li>
+					<li>expérimenter différentes stratégies de navigation,</li>
+					<li>optimiser la consommation énergétique,</li>
+					<li>intégrer des fonctions avancées non disponibles sur les modèles standards.</li>
+				</ul>
+				<p>
+					Ce blog documente l’ensemble du développement : architecture, choix techniques, essais, évolutions.
+				</p>
+			</section>
+			<section>
+				<h2>Robot tondeuse : architecture technique</h2>
+				<h3>1. Navigation autonome</h3>
+				<ul>
+					<li>Capteurs de position : GNSS, odométrie, IMU</li>
+					<li>Détection d’obstacles : ultrasons, lidar, bumpers</li>
+					<li>Algorithmes : trajectoires aléatoires, spirale, quadrillage, hybridation</li>
+				</ul>
+				<h3>2. Gestion de l’énergie</h3>
+				<ul>
+					<li>Batteries Li-ion ou LiFePO4</li>
+					<li>BMS et télémétrie en temps réel</li>
+					<li>Optimisation moteurs / électronique</li>
+				</ul>
+				<h3>3. Motorisation et contrôle</h3>
+				<ul>
+					<li>Moteurs DC ou brushless</li>
+					<li>Drivers, PWM, retour tachymétrique</li>
+					<li>Contrôle PID ou vectoriel selon configuration</li>
+				</ul>
+				<h3>4. Sécurité</h3>
+				<ul>
+					<li>Arrêt d’urgence</li>
+					<li>Détection de soulèvement</li>
+					<li>Zones interdites</li>
+					<li>Supervision logicielle (watchdog, redondance capteurs)</li>
+				</ul>
+				<h3>5. Software embarqué</h3>
+				<ul>
+					<li>Architecture modulaire</li>
+					<li>Communication interne : I²C, UART, CAN</li>
+					<li>Logs, télémétrie, mise à jour firmware</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Objectif du site</h2>
+				<ul>
+					<li>partager mes choix techniques, schémas et prototypes,</li>
+					<li>documenter les essais terrain,</li>
+					<li>proposer des pistes d’amélioration,</li>
+					<li>échanger avec d’autres passionnés d’électronique,</li>
+					<li>créer un espace d’apprentissage et de collaboration.</li>
+				</ul>
+				<p>
+					Que vous soyez ingénieur, maker, étudiant ou amateur de robotique, vos retours sont les bienvenus.
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
